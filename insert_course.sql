@@ -58,7 +58,7 @@ insert into users (
 	'124d3',
 	 19,
 	 2
-),(
+),
 (
 	'03c1ee6b-3095-4296-96b7-71c61236e612',
 	'sahid',
@@ -83,6 +83,7 @@ insert into users (
 	 31,
 	 1
 );
+
 
 ---- insert courses----
 insert into courses (
