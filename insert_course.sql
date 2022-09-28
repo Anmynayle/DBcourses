@@ -110,7 +110,7 @@ insert into courses (
 	2,
 	2,
 	'03c1ee6b-3095-4296-96b7-71c61236e612'
-)
+);
 
 --- insert course_video-----
 insert into courses_video  (

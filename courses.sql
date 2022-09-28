@@ -28,12 +28,12 @@ CREATE TABLE "courses_video" (
 
 CREATE TABLE "categories" (
   "id" SERIAL PRIMARY KEY,
-  "type" varchar
+  "type" varchar UNIQUE
 );
 
 CREATE TABLE "roles" (
   "id" SERIAL PRIMARY KEY,
-  "type" varchar
+  "type" varchar UNIQUE
 );
 
 CREATE TABLE "users_courses" (
@@ -58,7 +58,3 @@ ALTER TABLE "users_courses" ADD FOREIGN KEY ("id_user") REFERENCES "users" ("id"
 ALTER TABLE "users_courses" ADD FOREIGN KEY ("id_course") REFERENCES "courses" ("id");
 
 ALTER TABLE "courses" ADD FOREIGN KEY ("id_user") REFERENCES "users" ("id");
-
-
-ALTER TABLE "courses" ADD FOREIGN KEY ("id_user") REFERENCES "users" ("id");
-
