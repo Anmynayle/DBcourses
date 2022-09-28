@@ -169,3 +169,16 @@ on courses.id = users_courses.id_course
 	inner join users
 on users.id = courses.id_user;
 	
+--- VIEW
+
+create view v_courses_relation as
+select  categories.type as categories, courses.title as nombrecurso, users.name as dictadopor, courses_video.url,  users_courses.name_students  as estudiante,   users_courses.percent_complete, users_courses.complete 
+from courses 
+	inner join courses_video
+on courses_video.id_course = courses.id
+	inner join categories 
+on categories.id = courses.id_categories 
+	inner join users_courses 
+on courses.id = users_courses.id_course
+	inner join users
+on users.id = courses.id_user;
