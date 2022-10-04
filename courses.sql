@@ -37,7 +37,7 @@ CREATE TABLE "roles" (
 );
 
 CREATE TABLE "users_courses" (
-  "id" SERIAL,
+  "id" SERIAL PRIMARY KEY,
   "id_user" uuid NOT NULL,
   "id_course" int NOT NULL,
   "percent_complete" int,
